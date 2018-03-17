@@ -10,9 +10,9 @@ defmodule Xue2xi2.Repo.Migrations.CreateEntries do
 
       timestamps()
     end
-    
-    add_index :entries, :traditional
-    add_index :entries, :simplified
-    add_index :entries, :pinyin
+
+    create index(:entries, [:traditional])
+    create index(:entries, [:simplified])
+    create index(:entries, [:pinyin])
   end
 end
