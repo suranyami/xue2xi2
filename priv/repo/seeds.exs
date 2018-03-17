@@ -1,11 +1,2 @@
-# Script for populating the database. You can run it as:
-#
-#     mix run priv/repo/seeds.exs
-#
-# Inside the script, you can read and write to any of your
-# repositories directly:
-#
-#     Xue2xi2.Repo.insert!(%Xue2xi2.SomeSchema{})
-#
-# We recommend using the bang functions (`insert!`, `update!`
-# and so on) as they will fail if something goes wrong.
+Xue2xi2.Entries.destroy_all()
+Xue2xi2.CEDictParser.parse("data/cedict.txt")
